@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Main || Index</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<div class="navbar">
+    <div class="nav navbar-dark">
+        <div class="navbar-brand">WOW</div>
+    </div>
+</div>
+    <div class="container">
+        <h1>Main || Index Page</h1>
+
+        <table class="table">
+            <tr>
+                <td>customer_id</td>
+                <td>NAME</td>
+                <td>PHONE</td>
+                <td>ADDRESS</td>
+            </tr>
+            <tr th:each="cu: ${cus}">
+                <td th:text="${cu.id}">customer_id</td>
+                <td th:text="${cu.name}">NAME</td>
+                <td th:text="${cu.phone}">PHONE</td>
+                <td th:text="${cu.address}">ADDRESS</td>
+            </tr>
+        </table>
+
+
+
+
+
+    </div>
+
+</body>
+</html>
